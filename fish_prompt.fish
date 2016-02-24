@@ -55,7 +55,7 @@ function fish_prompt
 
   prompt_root
   prompt_dir
-  available git; and prompt_git
+  type -q git; and prompt_git
   prompt_arrow
 
   set_color normal
