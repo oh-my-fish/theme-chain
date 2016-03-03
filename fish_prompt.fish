@@ -60,7 +60,7 @@ function fish_prompt
 
   __chain_prompt_root
   __chain_prompt_dir
-  available git; and __chain_prompt_git
+  type -q git; and __chain_prompt_git
   __chain_prompt_arrow
 
   set_color normal
