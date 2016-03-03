@@ -28,6 +28,15 @@ Your prompt in chain consists of a series of *links*, with each link displaying 
 - Exit status of the last command
 
 
+## Customization
+The glyphs used in the chain can be customized using global variables. Here is a list of the available variables:
+
+- `$chain_prompt_glyph`: The arrow character at the end of the chain, right before the text input.
+- `$chain_git_branch_glyph`: Glyph to indicate the Git branch.
+- `$chain_git_dirty_glyph`: Glyph to indicate that the working branch has uncommitted changes.
+- `$chain_su_glyph`: Glyph to indicate that you have superuser privileges.
+
+
 ## License
 [MIT][mit] © [coderstephen][author] et [al][contributors]
 
