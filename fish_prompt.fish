@@ -34,11 +34,11 @@ function __chain_prompt_dir
 end
 
 function __chain_prompt_git
-  if test (_git_branch_name)
-    set -l git_branch (_git_branch_name)
+  if test (__chain_git_branch_name)
+    set -l git_branch (__chain_git_branch_name)
     __chain_prompt_segment blue "$chain_git_branch_glyph $git_branch"
 
-    if test (_is_git_dirty)
+    if test (__chain_is_git_dirty)
       __chain_prompt_segment yellow $chain_git_dirty_glyph
     end
   end
