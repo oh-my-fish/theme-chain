@@ -1,7 +1,12 @@
 function chain:inspect -d 'Inspect your active prompt links'
-  builtin set_color -u ^ /dev/null
+  if not functions -q __chain_compiled_prompt
+    builtin set_color red ^ /dev/null
+    echo "Prompt is not compiled!"
+    builtin set_color normal ^ /dev/null
+    echo
+  end
+
   echo 'Active prompt links'
-  builtin set_color normal ^ /dev/null
 
   for command in $__chain_links
     set -l segment (eval "$command")
@@ -27,4 +32,10 @@ function chain:inspect -d 'Inspect your active prompt links'
       builtin set_color normal ^ /dev/null
     end
   end
+
+  echo
+  echo 'Compiled prompt'
+
+  functions -q __chain_compiled_prompt
+    and type __chain_compiled_prompt
 end

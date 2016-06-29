@@ -1,7 +1,7 @@
 function chain:compile -d 'Compiles the prompt'
   set -l IFS ''
   eval (begin
-    echo 'function __chain_do_prompt_links'
+    echo 'function __chain_compiled_prompt'
     echo 'set -l IFS "\n"'
 
     for command in $__chain_links
@@ -10,7 +10,12 @@ function chain:compile -d 'Compiles the prompt'
 
         if set -q segment[2]
           builtin set_color \$segment[1] ^ /dev/null
-          builtin printf '<%s>─' \"\$segment[2]\"
+
+          set -q next
+            and echo -n '-'
+            or set next
+
+          builtin printf '<%s>' \"\$segment[2]\"
           builtin set_color normal ^ /dev/null
         end
       "

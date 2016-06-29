@@ -1,28 +1,27 @@
 function fish_prompt
   # Save the status code from the previous command.
   set -l __chain_last_status $status
+  set -l IFS ''
 
   set -q chain_prompt_glyph
     or set chain_prompt_glyph ">"
 
   # Display all links.
   if set -q chain_multiline
-    printf '┌'
-    __chain_do_prompt_links
-    printf '\n└'
+    printf '┌%s\n└' (__chain_compiled_prompt)
   else
-    __chain_do_prompt_links
+    printf '%s-' (__chain_compiled_prompt)
   end
 
   # Prompt arrow with status of last command.
   if test $__chain_last_status = 0
-    set_color green
+    builtin set_color green ^ /dev/null
   else
-    set_color red
+    builtin set_color $fish_color_error ^ /dev/null
     echo -n "$__chain_last_status-"
   end
 
   echo -n "$chain_prompt_glyph "
 
-  set_color normal
+  builtin set_color normal ^ /dev/null
 end
