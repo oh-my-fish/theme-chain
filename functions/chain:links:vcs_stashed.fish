@@ -4,7 +4,7 @@ function chain:links:vcs_stashed
 
   if vcs.present
     if vcs.stashed > /dev/null
-      echo yellow
+      echo 999
       echo "$chain_vcs_stashed_glyph"
     end
   end
