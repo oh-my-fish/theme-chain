@@ -16,11 +16,11 @@ function chain:compile -d 'Compiles the prompt'
             or set next
 
           builtin printf '<%s>' \"\$segment[2]\"
-          builtin set_color normal ^ /dev/null
         end
       "
     end
 
+    echo 'builtin set_color normal ^ /dev/null'
     echo 'end'
   end | source
 end
