@@ -1,6 +1,6 @@
 function chain:compile -d 'Compiles the prompt'
   set -l IFS ''
-  eval (begin
+  begin
     echo 'function __chain_compiled_prompt'
     echo 'set -l IFS "\n"'
 
@@ -22,5 +22,5 @@ function chain:compile -d 'Compiles the prompt'
     end
 
     echo 'end'
-  end)
+  end | source
 end

@@ -6,6 +6,14 @@ function fish_prompt
   set -q chain_prompt_glyph
     or set chain_prompt_glyph ">"
 
+  # If links aren't configured, set the defaults.
+  set -q __chain_links
+    or chain:defaults
+
+  # Compile the prompt if it is not already.
+  type -fq __chain_compiled_prompt
+    or chain:compile
+
   # Display all links.
   if set -q chain_multiline
     printf '┌%s\n└' (__chain_compiled_prompt)
