@@ -1,4 +1,4 @@
-function chain:links:vcs_stashed
+function chain.links.vcs_stashed
   set -q chain_vcs_stashed_glyph
     or set -l chain_vcs_stashed_glyph '*'
 

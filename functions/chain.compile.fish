@@ -1,4 +1,4 @@
-function chain:compile -d 'Compiles the prompt'
+function chain.compile -d 'Compiles the prompt'
   set -l IFS ''
   begin
     echo 'function __chain_compiled_prompt'

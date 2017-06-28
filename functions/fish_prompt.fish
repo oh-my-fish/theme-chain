@@ -8,11 +8,11 @@ function fish_prompt
 
   # If links aren't configured, set the defaults.
   set -q __chain_links
-    or chain:defaults
+    or chain.defaults
 
   # Compile the prompt if it is not already.
   type -fq __chain_compiled_prompt
-    or chain:compile
+    or chain.compile
 
   # Display all links.
   if set -q chain_multiline

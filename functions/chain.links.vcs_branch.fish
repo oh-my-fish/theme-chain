@@ -1,4 +1,4 @@
-function chain:links:vcs_branch
+function chain.links.vcs_branch
   set -q chain_vcs_branch_glyph
     or set chain_vcs_branch_glyph "⎇"
 

@@ -1,4 +1,4 @@
-function chain:inspect -d 'Inspect your active prompt links'
+function chain.inspect -d 'Inspect your active prompt links'
   if not functions -q __chain_compiled_prompt
     builtin set_color red ^ /dev/null
     echo "Prompt is not compiled!"

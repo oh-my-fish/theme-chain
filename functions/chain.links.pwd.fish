@@ -1,4 +1,4 @@
-function chain:links:pwd
+function chain.links.pwd
   set -q chain_project_glyph
     or set -l chain_project_glyph '@'
 

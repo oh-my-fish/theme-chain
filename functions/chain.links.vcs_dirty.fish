@@ -1,4 +1,4 @@
-function chain:links:vcs_dirty
+function chain.links.vcs_dirty
   set -q chain_vcs_dirty_glyph
     or set chain_vcs_dirty_glyph "±"
 
