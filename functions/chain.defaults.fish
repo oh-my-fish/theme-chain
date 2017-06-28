@@ -1,5 +1,5 @@
 function chain.defaults -d 'Reset prompt links to defaults'
-  set -e __chain_links
+  set -e chain_links
 
   chain.push chain.links.root
   chain.push chain.links.jobs

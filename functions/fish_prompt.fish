@@ -7,7 +7,7 @@ function fish_prompt
     or set chain_prompt_glyph ">"
 
   # If links aren't configured, set the defaults.
-  set -q __chain_links
+  set -q chain_links
     or chain.defaults
 
   # Compile the prompt if it is not already.

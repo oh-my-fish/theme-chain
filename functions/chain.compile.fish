@@ -4,7 +4,7 @@ function chain.compile -d 'Compiles the prompt'
     echo 'function __chain_compiled_prompt'
     echo 'set -l IFS "\n"'
 
-    for command in $__chain_links
+    for command in $chain_links
       echo "
         set -l segment ($command)
 
