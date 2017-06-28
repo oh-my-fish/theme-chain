@@ -1,10 +1,9 @@
-function chain.unshift -d 'Like chain:pop, but removes the bottom link'
-  if set -q chain_links[1]
-    set -e chain_links[1]
-  end
+function chain.unshift -a command -d 'Like chain.push, but inserts link at the bottom'
+  # Add the command to the global list of links.
+  set -U chain_links "$command" $chain_links
 
   # If the user runs this command, recompile the prompt for them so that their changes are immediately visible.
-  if test "$_" = chain.unshift
+  if test "$_" = chain.shift
     chain.compile
   end
 end
