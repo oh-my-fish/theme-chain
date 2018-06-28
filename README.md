@@ -89,6 +89,8 @@ The glyphs used in the default links can be customized using global variables. H
 - `$chain_git_branch_glyph`: Glyph to indicate the Git branch.
 - `$chain_git_dirty_glyph`: Glyph to indicate that the working branch has uncommitted changes.
 - `$chain_su_glyph`: Glyph to indicate that you have superuser privileges.
+- `$chain_link_open_glyph`: Glyph before each individual chain link (default `<`).
+- `$chain_link_close_glyph`: Glyph after each individual chain link (default `>`).
 
 
 ## License
