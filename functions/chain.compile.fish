@@ -1,5 +1,12 @@
 function chain.compile -d 'Compiles the prompt'
   set -l IFS ''
+
+  set -q chain_link_open_glyph
+    or set chain_link_open_glyph "<"
+
+  set -q chain_link_close_glyph
+    or set chain_link_close_glyph ">"
+
   begin
     echo 'function __chain_compiled_prompt'
     echo 'set -l IFS "\n"'
@@ -15,7 +22,7 @@ function chain.compile -d 'Compiles the prompt'
             and echo -n '-'
             or set next
 
-          builtin printf '<%s>' \"\$segment[2]\"
+          builtin printf '$chain_link_open_glyph%s$chain_link_close_glyph' \"\$segment[2]\"
         end
       "
     end
