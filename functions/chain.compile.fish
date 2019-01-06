@@ -16,7 +16,7 @@ function chain.compile -d 'Compiles the prompt'
         set -l segment ($command)
 
         if set -q segment[2]
-          builtin set_color \$segment[1] ^ /dev/null
+          builtin set_color \$segment[1] 2> /dev/null
 
           set -q next
             and echo -n '-'
@@ -27,7 +27,7 @@ function chain.compile -d 'Compiles the prompt'
       "
     end
 
-    echo 'builtin set_color normal ^ /dev/null'
+    echo 'builtin set_color normal 2> /dev/null'
     echo 'end'
   end | source
 end
