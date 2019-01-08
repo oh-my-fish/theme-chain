@@ -23,13 +23,13 @@ function fish_prompt
 
   # Prompt arrow with status of last command.
   if test $__chain_last_status = 0
-    builtin set_color green ^ /dev/null
+    builtin set_color green 2> /dev/null
   else
-    builtin set_color $fish_color_error ^ /dev/null
+    builtin set_color $fish_color_error 2> /dev/null
     echo -n "$__chain_last_status-"
   end
 
   echo -n "$chain_prompt_glyph "
 
-  builtin set_color normal ^ /dev/null
+  builtin set_color normal 2> /dev/null
 end
