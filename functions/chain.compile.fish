@@ -2,10 +2,10 @@ function chain.compile -d 'Compiles the prompt'
   set -l IFS ''
 
   set -q chain_link_open_glyph
-    or set chain_link_open_glyph "<"
+    or set chain_link_open_glyph "["
 
   set -q chain_link_close_glyph
-    or set chain_link_close_glyph ">"
+    or set chain_link_close_glyph "]"
 
   begin
     echo 'function __chain_compiled_prompt'
