@@ -3,7 +3,8 @@ function chain.links.vcs_dirty
     or set chain_vcs_dirty_glyph "±"
 
   if vcs.present
-    if vcs.dirty
+    #if vcs.dirty
+    if vcs.status
       echo purple
       echo "$chain_vcs_dirty_glyph"
     end
