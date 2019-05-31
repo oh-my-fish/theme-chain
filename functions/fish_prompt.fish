@@ -26,7 +26,7 @@ function fish_prompt
     builtin set_color green 2> /dev/null
   else
     builtin set_color $fish_color_error 2> /dev/null
-    echo -n "$__chain_last_status-"
+    # echo -n "$__chain_last_status-"
   end
 
   echo -n "$chain_prompt_glyph "

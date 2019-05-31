@@ -1,6 +1,7 @@
 function chain.defaults -d 'Reset prompt links to defaults'
   set -e chain_links
 
+  chain.push chain.links.time
   chain.push chain.links.root
   chain.push chain.links.jobs
   chain.push chain.links.pwd
