@@ -6,7 +6,7 @@ function chain.links.pwd
   set -l path "$PWD"
 
   # Replace either HOME with ~ or abbreviate project root.
-  if vcs.present
+  if vcs.refresh && vcs.present 
     set path (string replace (vcs.root) '' "$path")
     set prefix @(basename (vcs.root))
   else
